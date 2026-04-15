@@ -5,9 +5,17 @@ node_modules/
 test-results/
 playwright-report/
 blob-report/
-reports/
 trace.zip
 allure-results/
+
+# Generated report files (but keep reports directory structure)
+reports/html/*.html
+reports/html/data/
+reports/html/trace/
+reports/test-results/
+reports/archive/
+reports/*.xml
+reports/*.json
 
 # Logs
 *.log
