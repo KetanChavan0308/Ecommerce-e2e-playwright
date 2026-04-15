@@ -1,0 +1,86 @@
+[
+  {
+    "testName": "Email Not Registered",
+    "username": "testproject@gmail.com",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Invalid Password",
+    "username": "testproject@gmail.com",
+    "password": "wrongPassword",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Invalid Email",
+    "username": "wronguser@gmail.com",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Invalid Email and Password",
+    "username": "invaliduser@gmail.com",
+    "password": "invalidPass",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Empty Email",
+    "username": "",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Empty Password",
+    "username": "testproject@gmail.com",
+    "password": "",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Empty Email and Password",
+    "username": "",
+    "password": "",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Invalid Email Format",
+    "username": "testprojectgmail.com",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Email Without Domain",
+    "username": "testproject@",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Email With Leading Spaces",
+    "username": "  testproject@gmail.com",
+    "password": "test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Password With Leading Spaces",
+    "username": "testproject@gmail.com",
+    "password": "  test@1234",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Password With Trailing Spaces",
+    "username": "testproject@gmail.com",
+    "password": "test@1234  ",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "SQL Injection Attempt",
+    "username": "' OR '1'='1",
+    "password": "' OR '1'='1",
+    "expectedResult": "failed"
+  },
+  {
+    "testName": "Special Characters in Password",
+    "username": "testproject@gmail.com",
+    "password": "@#$%^&*!",
+    "expectedResult": "failed"
+  }
+]

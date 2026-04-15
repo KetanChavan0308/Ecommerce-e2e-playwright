@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+blob-report/
+reports/
+trace.zip
+allure-results/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+*.swp
+
+# Build output
+dist/
+coverage/
+
+# Videos and screenshots
+*.webm
+*.png
+*.zip

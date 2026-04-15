@@ -1,0 +1,3 @@
+test Name,username,password,expectedResult
+valid login,testproject@gmail.com,test@1234,Login successful
+Invalid login,testproject@gmail.com,wrongPassword,Login failed
