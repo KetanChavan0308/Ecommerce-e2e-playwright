@@ -486,14 +486,14 @@ npx allure serve reports/allure-results
 
 ## Environment & Dependencies
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| **@playwright/test** | 1.59.1 | Test framework & CLI |
-| **TypeScript** | Latest | Type safety |
-| **allure-playwright** | 3.7.0 | Advanced reporting |
-| **@faker-js/faker** | 10.4.0 | Random test data |
-| **csv-parse** | 6.2.1 | CSV data loading |
-| **xlsx** | 0.18.5 | Excel file support |
+| Package               | Version | Purpose              |
+| --------------------- | ------- | -------------------- |
+| **@playwright/test**  | 1.59.1  | Test framework & CLI |
+| **TypeScript**        | Latest  | Type safety          |
+| **allure-playwright** | 3.7.0   | Advanced reporting   |
+| **@faker-js/faker**   | 10.4.0  | Random test data     |
+| **csv-parse**         | 6.2.1   | CSV data loading     |
+| **xlsx**              | 0.18.5  | Excel file support   |
 
 ## Support & Documentation
 

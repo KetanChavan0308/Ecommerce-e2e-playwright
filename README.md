@@ -9,19 +9,19 @@ A comprehensive **End-to-End (E2E) automation testing framework** for NopCommerc
 
 ## 📊 Project Statistics
 
-| Metric | Value |
-|--------|-------|
-| **Framework** | Playwright v1.59.1 |
-| **Language** | TypeScript |
-| **Test Suites** | 4 |
-| **Total Tests** | 16+ |
-| **Data-Driven Cases** | 14 |
-| **Page Objects** | 8 |
-| **Test Coverage** | Login, Registration, Shopping, Checkout |
-| **Browsers** | Chromium, Firefox, Safari, Edge |
-| **CI/CD** | GitHub Actions ready |
-| **Parallel Execution** | ✅ Enabled |
-| **Reporting** | HTML, XML (JUnit), Allure |
+| Metric                 | Value                                   |
+| ---------------------- | --------------------------------------- |
+| **Framework**          | Playwright v1.59.1                      |
+| **Language**           | TypeScript                              |
+| **Test Suites**        | 4                                       |
+| **Total Tests**        | 16+                                     |
+| **Data-Driven Cases**  | 14                                      |
+| **Page Objects**       | 8                                       |
+| **Test Coverage**      | Login, Registration, Shopping, Checkout |
+| **Browsers**           | Chromium, Firefox, Safari, Edge         |
+| **CI/CD**              | GitHub Actions ready                    |
+| **Parallel Execution** | ✅ Enabled                              |
+| **Reporting**          | HTML, XML (JUnit), Allure               |
 
 ## 🚀 Quick Start
 
@@ -127,10 +127,13 @@ Ecommerce-e2e-playwright/
 ## 🧪 Test Suites
 
 ### 1. Login Tests (`tests/Login.spec.ts`)
+
 User authentication and login workflows with various scenarios.
 
 ### 2. Data-Driven Testing (`tests/dataDrivanTesting.spec.ts`)
+
 **14 comprehensive test cases** covering:
+
 - ✅ Valid/Invalid credentials
 - ✅ Email format validation
 - ✅ Password requirements
@@ -140,18 +143,22 @@ User authentication and login workflows with various scenarios.
 - ✅ Special character handling
 
 ### 3. Purchase Order (`tests/purchaseOrder.spec.ts`)
+
 End-to-end purchase workflow:
+
 - Product browsing
 - Add to cart with fallback verification
 - Cart management
 - Checkout process
 
 ### 4. Account Registration (`tests/AccountRegistration.spec.ts`)
+
 User registration and account creation flows.
 
 ## 📋 Test Data
 
 ### JSON Format (`testdata/loginData.json`)
+
 ```json
 [
   {
@@ -171,20 +178,21 @@ User registration and account creation flows.
 ```
 
 ### CSV Format (`testdata/loginData.csv`)
+
 Headers: `testName`, `username`, `password`, `expectedResult`
 
 ## 🔧 Configuration
 
 ### Playwright Config (`playwright.config.ts`)
 
-| Setting | Value | Purpose |
-|---------|-------|---------|
-| Test Timeout | 120 seconds | Timeout per test |
-| Parallel | Enabled | Faster execution |
-| Retries | 2 (CI), 1 (Local) | Flaky test handling |
-| Screenshot | On failure | Storage optimization |
-| Video | On failure | Capture failures |
-| Trace | On first retry | Detailed debugging |
+| Setting      | Value             | Purpose              |
+| ------------ | ----------------- | -------------------- |
+| Test Timeout | 120 seconds       | Timeout per test     |
+| Parallel     | Enabled           | Faster execution     |
+| Retries      | 2 (CI), 1 (Local) | Flaky test handling  |
+| Screenshot   | On failure        | Storage optimization |
+| Video        | On failure        | Capture failures     |
+| Trace        | On first retry    | Detailed debugging   |
 
 ### Supported Browsers
 
@@ -195,6 +203,7 @@ Headers: `testName`, `username`, `password`, `expectedResult`
 - 🌐 Edge (Optional)
 
 Enable in `playwright.config.ts`:
+
 ```typescript
 projects: [
   { name: "Chromium", use: { ...devices["Desktop Chrome"] } },
@@ -202,7 +211,7 @@ projects: [
   { name: "WebKit", use: { ...devices["Desktop Safari"] } },
   { name: "Chrome", use: { ...devices["Desktop Chrome"], channel: "chrome" } },
   { name: "Edge", use: { ...devices["Desktop Edge"], channel: "msedge" } },
-]
+];
 ```
 
 ## 🔄 CI/CD Integration
@@ -210,6 +219,7 @@ projects: [
 ### GitHub Actions (Pre-configured)
 
 Tests run automatically on:
+
 - Push to `main` or `master` branches
 - Pull requests
 
@@ -218,6 +228,7 @@ Workflow file: `.github/workflows/playwright.yml`
 ### Manual CI/CD Setup
 
 #### Jenkins
+
 ```groovy
 pipeline {
   stages {
@@ -237,31 +248,38 @@ pipeline {
 ```
 
 #### Azure DevOps
+
 ```yaml
 - script: npm ci && npx playwright install
 - script: npx playwright test
 - task: PublishTestResults@2
   inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: 'reports/results.xml'
+    testResultsFormat: "JUnit"
+    testResultsFiles: "reports/results.xml"
 ```
 
 ## 📊 Reporting
 
 ### HTML Report
+
 Interactive Playwright report with test details, screenshots, videos, and traces.
+
 ```bash
 npx playwright show-report
 ```
 
 ### Allure Report
+
 Advanced analytics and trend analysis.
+
 ```bash
 npx allure serve reports/allure-results
 ```
 
 ### JUnit XML
+
 Integration with CI/CD systems:
+
 ```bash
 cat reports/results.xml
 ```
@@ -271,7 +289,9 @@ For detailed report documentation, see [reports/README.md](reports/README.md)
 ## 🛠️ Utilities
 
 ### DataProvider
+
 Load test data from JSON or CSV:
+
 ```typescript
 import DataProvider from "./utils/dataProviders";
 
@@ -283,13 +303,15 @@ const csvData = await DataProvider.getDataFromCsv("testdata/loginData.csv");
 ```
 
 ### Random Data Generator
+
 Generate realistic test data using Faker.js:
+
 ```typescript
 import DataGenerator from "./utils/randomDataGenerator";
 
-const randomEmail = DataGenerator.randomEmail();     // random@example.com
-const randomPassword = DataGenerator.randomPassword();  // Xt9@mK2pL5
-const randomPhone = DataGenerator.randomPhone();     // +1-555-123-4567
+const randomEmail = DataGenerator.randomEmail(); // random@example.com
+const randomPassword = DataGenerator.randomPassword(); // Xt9@mK2pL5
+const randomPhone = DataGenerator.randomPhone(); // +1-555-123-4567
 ```
 
 ## 🔍 Key Features
@@ -303,28 +325,32 @@ const randomPhone = DataGenerator.randomPhone();     // +1-555-123-4567
 ✅ **Trace Recording** - Debug failures with step-by-step recording  
 ✅ **CI/CD Ready** - GitHub Actions pre-configured  
 ✅ **TypeScript Support** - Full type safety & intellisense  
-✅ **Random Data Generation** - Faker.js integration  
+✅ **Random Data Generation** - Faker.js integration
 
 ## 🚨 Troubleshooting
 
 ### Browser Not Found
+
 ```bash
 npx playwright install --with-deps
 ```
 
 ### Tests Timeout
+
 - Check network connectivity
 - Increase timeout in `playwright.config.ts`:
   ```typescript
-  timeout: 180000  // 3 minutes
+  timeout: 180000; // 3 minutes
   ```
 
 ### Report Not Generated
+
 1. Verify `reports/` directory exists
 2. Check `playwright.config.ts` reporter configuration
 3. Run with verbose logging: `npx playwright test --reporter=verbose`
 
 ### Allure Report Empty
+
 ```bash
 npm install --save-dev allure-playwright
 npx allure serve reports/allure-results
@@ -332,14 +358,14 @@ npx allure serve reports/allure-results
 
 ## 📦 Dependencies
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| **@playwright/test** | ^1.59.1 | Testing framework |
-| **@types/node** | ^25.5.2 | TypeScript Node types |
-| **allure-playwright** | ^3.7.0 | Advanced reporting |
-| **@faker-js/faker** | ^10.4.0 | Random test data |
-| **csv-parse** | ^6.2.1 | CSV parsing |
-| **xlsx** | ^0.18.5 | Excel support |
+| Package               | Version | Purpose               |
+| --------------------- | ------- | --------------------- |
+| **@playwright/test**  | ^1.59.1 | Testing framework     |
+| **@types/node**       | ^25.5.2 | TypeScript Node types |
+| **allure-playwright** | ^3.7.0  | Advanced reporting    |
+| **@faker-js/faker**   | ^10.4.0 | Random test data      |
+| **csv-parse**         | ^6.2.1  | CSV parsing           |
+| **xlsx**              | ^0.18.5 | Excel support         |
 
 ## 📖 Documentation
 
@@ -369,9 +395,9 @@ Contributions are welcome! Please follow these steps:
 
 ## 🏢 Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0.0 | Apr 15, 2026 | Initial release with 16+ tests |
+| Version | Date         | Changes                        |
+| ------- | ------------ | ------------------------------ |
+| 1.0.0   | Apr 15, 2026 | Initial release with 16+ tests |
 
 ## 📞 Support
 
@@ -384,4 +410,3 @@ Contributions are welcome! Please follow these steps:
 **Last Updated**: April 15, 2026  
 **Status**: ✅ Active Development  
 **Build**: Passing (GitHub Actions)
-
