@@ -9,11 +9,12 @@ trace.zip
 allure-results/
 
 # Generated report files (but keep reports directory structure)
-reports/html/*.html
+reports/html/**/*.html
 reports/html/data/
 reports/html/trace/
 reports/test-results/
-reports/archive/
+reports/archive/**/*
+!reports/archive/.gitkeep
 reports/*.xml
 reports/*.json
 
