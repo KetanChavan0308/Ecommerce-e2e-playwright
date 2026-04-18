@@ -116,13 +116,13 @@ reports/
 
 ### Available Test Files
 
-| Test Suite               | File                                          | Purpose                                       | Test Cases                            |
-| ------------------------ | --------------------------------------------- | --------------------------------------------- | ------------------------------------- |
-| **Login Tests**          | `tests/ui/login.ui.spec.ts`                   | User authentication & login flows             | Multiple scenarios                    |
-| **Data-Driven Tests**    | `tests/ui/data-driven-testing.ui.spec.ts`     | 14 data-driven login validation tests         | Email/password validation, edge cases |
-| **Purchase Order**       | `tests/ui/purchase-order.ui.spec.ts`          | E2E purchase workflow (add to cart, checkout) | 2 tests                               |
-| **Account Registration** | `tests/ui/account-registration.ui.spec.ts`    | User registration flows                       | Multiple registration scenarios       |
-| **API - Booking**        | `tests/api/booking.api.spec.ts`               | RESTful API testing (Restful Booker API)      | POST, GET, PUT, PATCH, DELETE         |
+| Test Suite               | File                                       | Purpose                                       | Test Cases                            |
+| ------------------------ | ------------------------------------------ | --------------------------------------------- | ------------------------------------- |
+| **Login Tests**          | `tests/ui/login.ui.spec.ts`                | User authentication & login flows             | Multiple scenarios                    |
+| **Data-Driven Tests**    | `tests/ui/data-driven-testing.ui.spec.ts`  | 14 data-driven login validation tests         | Email/password validation, edge cases |
+| **Purchase Order**       | `tests/ui/purchase-order.ui.spec.ts`       | E2E purchase workflow (add to cart, checkout) | 2 tests                               |
+| **Account Registration** | `tests/ui/account-registration.ui.spec.ts` | User registration flows                       | Multiple registration scenarios       |
+| **API - Booking**        | `tests/api/booking.api.spec.ts`            | RESTful API testing (Restful Booker API)      | POST, GET, PUT, PATCH, DELETE         |
 
 ### Page Objects
 
