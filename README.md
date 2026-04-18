@@ -51,8 +51,14 @@ npx playwright install
 # Run all tests
 npx playwright test
 
+# Run all UI tests
+npx playwright test tests/ui
+
+# Run all API tests
+npx playwright test tests/api
+
 # Run specific test suite
-npx playwright test tests/dataDrivanTesting.spec.ts
+npx playwright test tests/ui/data-driven-testing.ui.spec.ts
 
 # Run with browser visible
 npx playwright test --headed
@@ -79,11 +85,15 @@ npx allure serve reports/allure-results
 ```
 Ecommerce-e2e-playwright/
 │
-├── tests/                              # Test files
-│   ├── Login.spec.ts                  # Login scenarios
-│   ├── dataDrivanTesting.spec.ts      # 14 data-driven test cases
-│   ├── purchaseOrder.spec.ts          # E2E purchase workflow (add to cart, checkout)
-│   └── AccountRegistration.spec.ts    # User registration tests
+├── tests/                                          # Test files
+│   ├── ui/                                         # UI E2E Tests
+│   │   ├── login.ui.spec.ts                        # Login scenarios
+│   │   ├── data-driven-testing.ui.spec.ts          # 14 data-driven test cases
+│   │   ├── purchase-order.ui.spec.ts              # E2E purchase workflow
+│   │   └── account-registration.ui.spec.ts        # User registration tests
+│   │
+│   └── api/                                        # API Tests
+│       └── booking.api.spec.ts                     # REST API booking tests
 │
 ├── pages/                              # Page Object Models (POM)
 │   ├── LoginPage.ts                   # Login form interactions
@@ -126,11 +136,13 @@ Ecommerce-e2e-playwright/
 
 ## 🧪 Test Suites
 
-### 1. Login Tests (`tests/Login.spec.ts`)
+### UI Tests
+
+#### 1. Login Tests (`tests/ui/login.ui.spec.ts`)
 
 User authentication and login workflows with various scenarios.
 
-### 2. Data-Driven Testing (`tests/dataDrivanTesting.spec.ts`)
+#### 2. Data-Driven Testing (`tests/ui/data-driven-testing.ui.spec.ts`)
 
 **14 comprehensive test cases** covering:
 
@@ -142,18 +154,28 @@ User authentication and login workflows with various scenarios.
 - ✅ Boundary value testing
 - ✅ Special character handling
 
-### 3. Purchase Order (`tests/purchaseOrder.spec.ts`)
+#### 3. Purchase Order (`tests/ui/purchase-order.ui.spec.ts`)
 
 End-to-end purchase workflow:
 
 - Product browsing
 - Add to cart with fallback verification
-- Cart management
-- Checkout process
 
-### 4. Account Registration (`tests/AccountRegistration.spec.ts`)
+#### 4. Account Registration (`tests/ui/account-registration.ui.spec.ts`)
 
-User registration and account creation flows.
+User registration and account management tests.
+
+### API Tests
+
+#### 5. REST API - Booking (`tests/api/booking.api.spec.ts`)
+
+RESTful API testing with the Restful Booker API:
+
+- POST - Create Booking
+- GET - Fetch Booking
+- PUT - Update Booking
+- PATCH - Partial Update
+- DELETE - Remove Booking
 
 ## 📋 Test Data
 
