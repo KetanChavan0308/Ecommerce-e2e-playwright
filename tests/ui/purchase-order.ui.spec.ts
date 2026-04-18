@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { MyAccountPage } from "../pages/MyAccountPage";
-import { HomePage } from "../pages/HomePage";
-import { TestConfig } from "../test.config";
-import { LoginPage } from "../pages/LoginPage";
-import { DataProvider } from "../utils/dataProviders";
-import { ProductPage } from "../pages/ProductPage";
-import { ShoppingCartPage } from "../pages/ShoppingCartPage";
+import { MyAccountPage } from "../../pages/MyAccountPage";
+import { HomePage } from "../../pages/HomePage";
+import { TestConfig } from "../../test.config";
+import { LoginPage } from "../../pages/LoginPage";
+import { DataProvider } from "../../utils/dataProviders";
+import { ProductPage } from "../../pages/ProductPage";
+import { ShoppingCartPage } from "../../pages/ShoppingCartPage";
 
 test.describe("purchase order test", () => {
   // ====================================================

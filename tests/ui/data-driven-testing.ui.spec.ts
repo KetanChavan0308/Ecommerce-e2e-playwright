@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage";
-import { HomePage } from "../pages/HomePage";
-import { TestConfig } from "../test.config";
-import loginData from "../testdata/loginData.json";
+import { LoginPage } from "../../pages/LoginPage";
+import { HomePage } from "../../pages/HomePage";
+import { TestConfig } from "../../test.config";
+import loginData from "../../testdata/loginData.json";
 
 // ====================================================
 // 📊 Data-Driven Testing - Beginner Friendly

@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/HomePage";
-import { TestConfig } from "../test.config";
-import { RegistrationPage } from "../pages/RegistrationPage";
+import { HomePage } from "../../pages/HomePage";
+import { TestConfig } from "../../test.config";
+import { RegistrationPage } from "../../pages/RegistrationPage";
 import { faker } from "@faker-js/faker";
-import { generateRandomData } from "../utils/randomDataGenerator";
-import { LogoutPage } from "../pages/LogoutPage";
+import { generateRandomData } from "../../utils/randomDataGenerator";
+import { LogoutPage } from "../../pages/LogoutPage";
 
 test.describe("Account Registration Tests", () => {
   let homePage: HomePage;

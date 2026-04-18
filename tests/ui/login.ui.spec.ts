@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage";
-import { TestConfig } from "../test.config";
-import { HomePage } from "../pages/HomePage";
-import { LogoutPage } from "../pages/LogoutPage";
+import { LoginPage } from "../../pages/LoginPage";
+import { TestConfig } from "../../test.config";
+import { HomePage } from "../../pages/HomePage";
+import { LogoutPage } from "../../pages/LogoutPage";
 
 test.describe("Login Page", () => {
   let loginPage: LoginPage;
